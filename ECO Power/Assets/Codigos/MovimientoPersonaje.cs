@@ -73,12 +73,5 @@ public class MovimientoPersonaje : MonoBehaviour
         posicionIncial = ubicacion.position;
         rotacionIncial = ubicacion.rotation;
     }
-    public void Reiniciar()
-    {
-        controladorCuerpo.Move(Vector3.zero);
-        controladorCuerpo.enabled = false;
-        transform.position = posicionIncial;
-        transform.rotation = rotacionIncial;
-        controladorCuerpo.enabled = true;
-    }
+   
 }
