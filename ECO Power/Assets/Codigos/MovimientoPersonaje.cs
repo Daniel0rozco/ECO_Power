@@ -17,7 +17,6 @@ public class MovimientoPersonaje : MonoBehaviour
     private Vector3 posicionIncial;
     private Quaternion rotacionIncial;
 
-    private bool caer=false;
     private CharacterController controladorCuerpo;
     private Animator animaciones;
     void Start()
@@ -73,5 +72,12 @@ public class MovimientoPersonaje : MonoBehaviour
         posicionIncial = ubicacion.position;
         rotacionIncial = ubicacion.rotation;
     }
-   
+    public void Reiniciar()
+    {
+        controladorCuerpo.Move(Vector3.zero);
+        controladorCuerpo.enabled = false;
+        transform.position = posicionIncial;
+        transform.rotation = rotacionIncial;
+        controladorCuerpo.enabled = true;
+    }
 }
