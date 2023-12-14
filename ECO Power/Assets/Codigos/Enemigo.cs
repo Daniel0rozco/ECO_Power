@@ -24,4 +24,8 @@ public class Enemigo : MonoBehaviour
         Vector3 nuevaPosicion = posicionInicial + direccion * valor;
         cuerpoRigido.MovePosition(nuevaPosicion);
     }
+    public void Destruir()
+    {
+        Destroy(this.gameObject);
+    }
 }
